@@ -79,7 +79,7 @@ export function HomeReel({ offers, startId }: { offers: StoreOffer[]; startId?: 
               <ReelStage title={offer.title} poster={offer.poster} video={offer.video} active={active.id === offer.id} reduced={reduced} />
               <div className="dock">
                 <p className="eyebrow">
-                  {offer.preview ? "Preview" : "Listing"} · {offer.durationSec ? formatSeconds(offer.durationSec) : "No clip"} · {index + 1} of {offers.length}
+                  {offer.preview ? "Sample" : "Listing"} · {index + 1} / {offers.length}{offer.durationSec ? ` · ${formatSeconds(offer.durationSec)}` : ""}
                 </p>
                 <h2 id={`reel-${offer.id}`} className="clamp">
                   {offer.title}
@@ -126,10 +126,8 @@ export function HomeReel({ offers, startId }: { offers: StoreOffer[]; startId?: 
           {active.sellerArea ? ` · ${active.sellerArea}` : ""}
         </p>
         <p>{active.description}</p>
-        <p className="notice">
-          {active.purchasable
-            ? "This listing can be ordered while checkout is open."
-            : "Not for sale. The picture is an illustration or checkout is closed, so it cannot be ordered."}
+        <p className="quiet">
+          {active.purchasable ? "Available to order while checkout is open." : "Sample. Not for sale."}
         </p>
         <div className="row-actions">
           <Link className="btn" href={`/product/${active.id}`}>

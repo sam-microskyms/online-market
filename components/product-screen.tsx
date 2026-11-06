@@ -10,14 +10,7 @@ export function ProductScreen({ offer, related }: { offer: StoreOffer; related: 
     <div className="page">
       <div className="product-layout">
         <div className="hero">
-          {offer.video ? (
-            <video poster={offer.poster} controls playsInline preload="none" aria-label={`${offer.title}. Product clip.`}>
-              <source src={offer.video} type="video/mp4" />
-              <track kind="descriptions" srcLang="en" label="English description" src="/media/silent-demo.vtt" />
-            </video>
-          ) : (
-            <img src={offer.poster} alt={`${offer.title}. Illustration, not a photograph of stock.`} />
-          )}
+          <img src={offer.poster} alt={`${offer.title}. Sample photograph, not merchandise in stock.`} />
         </div>
         <div className="stack">
           <p className="eyebrow">{category?.label}</p>
@@ -27,10 +20,10 @@ export function ProductScreen({ offer, related }: { offer: StoreOffer; related: 
             {offer.sellerName}
             {offer.sellerArea ? ` · ${offer.sellerArea}` : ""}
           </p>
-          <p className="notice">
+          <p className="quiet">
             {offer.purchasable
-              ? `In stock: ${offer.stock}. Delivery is only available if checkout is open for your division.`
-              : "Not for sale. Stock shown on preview listings is not a warehouse count. Delivery and payment are not open."}
+              ? `Stock ${offer.stock}. Delivery follows the method enabled at checkout.`
+              : "Sample photograph. Not stock for sale."}
           </p>
           <p>{offer.description}</p>
           {offer.durationSec ? <p className="help">Clip length about {formatSeconds(offer.durationSec)}. Recommended 15 seconds, maximum 30.</p> : null}
@@ -71,7 +64,6 @@ export function ProductScreen({ offer, related }: { offer: StoreOffer; related: 
               More in {category?.short}
             </Link>
           </div>
-          {!offer.purchasable ? <p className="help">There is no add-to-bag action because this item cannot be ordered.</p> : null}
         </div>
       </div>
       {related.length > 0 ? (

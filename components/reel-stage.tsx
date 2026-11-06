@@ -52,7 +52,7 @@ export function ReelStage({
   }
 
   const showVideo = Boolean(active && src && !failed);
-  const illustration = `${title}. Illustration, not a photograph of stock.`;
+  const illustration = `${title}. Sample photograph, not merchandise in stock.`;
 
   return (
     <div className="stage">
@@ -66,7 +66,7 @@ export function ReelStage({
           playsInline
           loop
           preload="none"
-          aria-label={`${title}. Silent illustration, not product footage.`}
+          aria-label={`${title}. Sample motion from a photograph, not footage of stock.`}
           className={playing ? "is-playing" : undefined}
           onPlaying={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
@@ -75,7 +75,7 @@ export function ReelStage({
           <track kind="descriptions" srcLang="en" label="English description" src="/media/silent-demo.vtt" default />
         </video>
       ) : null}
-      <p className="stage-chip demo-pill">{src ? "Clip" : "Illustration"}</p>
+      <p className="stage-chip demo-pill">Sample</p>
       <div className="stage-controls">
         {showVideo ? (
           <>

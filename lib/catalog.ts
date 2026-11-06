@@ -356,7 +356,7 @@ export function seedState(): DemoState {
 function product(input: Omit<Product, "poster" | "video" | "reviewNote"> & { video?: false; reviewNote?: string }): Product {
   return {
     reviewNote: input.reviewNote ?? "",
-    poster: `/media/${input.id}.png`,
+    poster: `/media/${input.id}.jpg`,
     video: input.video === false || input.durationSec == null ? null : `/media/${input.id}.mp4`,
     id: input.id,
     sellerId: input.sellerId,

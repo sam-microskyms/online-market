@@ -66,7 +66,7 @@ export function ShopGrid({
         <div className="grid" style={{ marginTop: 12 }}>
           {filtered.map((offer) => (
             <Link key={offer.id} className="card" href={`/product/${offer.id}`}>
-              <img src={offer.poster} alt={`${offer.title}. Illustration, not a photograph of stock.`} />
+                <img src={offer.poster} alt={`${offer.title}. Sample photograph, not merchandise in stock.`} />
               <h2>{offer.title}</h2>
               <p className="price">{formatBdt(offer.priceBdt)}</p>
               <p className="help">

@@ -2,7 +2,7 @@
 
 Bangladesh-first multi-seller shop. The homepage is a product reel. Category grids, product pages, accounts, and a seller application sit around that reel.
 
-Checkout, cash on delivery, and prepaid payment are off unless you configure them. With the variables in `.env.example` left blank, the site shows an illustration preview and refuses to create accounts, seller applications, or orders.
+Checkout, cash on delivery, and prepaid payment are off unless you configure them. With the variables in `.env.example` left blank, the site shows licensed sample photographs and refuses to create accounts, seller applications, or orders.
 
 ## Run
 
@@ -25,7 +25,7 @@ npm run build
 - Retail header, search, and the five categories.
 - Homepage reel with clips, price, seller, and a link to the product page.
 - Shop grid with search, category, and sort.
-- Product pages with illustration, description, and disabled options where a listing has them.
+- Product pages with a sample photograph, description, and a closed-commerce note.
 - Become a Seller explains the real application steps and what is not included.
 - Account, seller desk, admin, cart, and checkout say they are closed and do not report a fake success.
 - Livestreams say they are not available.
@@ -42,4 +42,4 @@ No card form. No bKash or SSLCommerz client. Prepaid orders stay `pending_paymen
 
 ## Tests
 
-`tests/commerce.test.ts` covers roles, seller approval gates, preview items that cannot be ordered, server prices, closed checkout, and webhook signatures. Those tests do not call a live Supabase project. `tests/media.test.ts` checks the illustration files. `tests/market.test.ts` covers older helper functions that are not the shop checkout.
+`tests/commerce.test.ts` covers roles, seller approval gates, preview items that cannot be ordered, server prices, closed checkout, and webhook signatures. Those tests do not call a live Supabase project. `tests/media.test.ts` checks the sample photograph files. `tests/market.test.ts` covers older helper functions that are not the shop checkout.
