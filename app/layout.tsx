@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#F3EEE6" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#f6f6f5" };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   const viewer = await getViewer();

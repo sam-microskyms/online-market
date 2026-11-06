@@ -7,7 +7,7 @@ import { CATEGORIES } from "@/lib/market";
 export function ProductScreen({ offer, related }: { offer: StoreOffer; related: StoreOffer[] }) {
   const category = CATEGORIES.find((item) => item.id === offer.category);
   return (
-    <div className="page">
+    <div className="page product-page">
       <div className="product-layout">
         <div className="hero">
           <img src={offer.poster} alt={`${offer.title}. Sample photograph, not merchandise in stock.`} />
@@ -20,13 +20,13 @@ export function ProductScreen({ offer, related }: { offer: StoreOffer; related: 
             {offer.sellerName}
             {offer.sellerArea ? ` · ${offer.sellerArea}` : ""}
           </p>
-          <p className="quiet">
-            {offer.purchasable
-              ? `Stock ${offer.stock}. Delivery follows the method enabled at checkout.`
-              : "Sample photograph. Not stock for sale."}
-          </p>
           <p>{offer.description}</p>
-          {offer.durationSec ? <p className="help">Clip length about {formatSeconds(offer.durationSec)}. Recommended 15 seconds, maximum 30.</p> : null}
+          {offer.purchasable ? <p className="quiet">Stock {offer.stock}. Delivery follows the method enabled at checkout.</p> : <p className="quiet">Not for sale.</p>}
+          {offer.durationSec ? (
+            <p className="help">About {formatSeconds(offer.durationSec)} of motion across the photograph. Not filmed product footage.</p>
+          ) : (
+            <p className="help">Photograph only. There is no motion for this sample.</p>
+          )}
           {offer.details.length > 0 ? (
             <ul className="list-reset">
               {offer.details.map((detail) => (
@@ -58,7 +58,7 @@ export function ProductScreen({ offer, related }: { offer: StoreOffer; related: 
               </form>
             ) : null}
             <Link className="btn" href={`/?item=${offer.id}`}>
-              Watch in the reel
+              Open in the reel
             </Link>
             <Link className="btn secondary" href={`/shop?category=${offer.category}`}>
               More in {category?.short}

@@ -25,7 +25,7 @@ export function ShopGrid({
   const heading = CATEGORIES.find((item) => item.id === category)?.label ?? "Shop";
 
   return (
-    <div className="page">
+    <div className="page shop-page">
       <header className="page-intro">
         <p className="eyebrow">Shop</p>
         <h1>{heading}</h1>
@@ -63,7 +63,7 @@ export function ShopGrid({
       {filtered.length === 0 ? (
         <p>Nothing matches. Try another category or search.</p>
       ) : (
-        <div className="grid" style={{ marginTop: 12 }}>
+        <div className="grid shop-grid">
           {filtered.map((offer) => (
             <Link key={offer.id} className="card" href={`/product/${offer.id}`}>
                 <img src={offer.poster} alt={`${offer.title}. Sample photograph, not merchandise in stock.`} />

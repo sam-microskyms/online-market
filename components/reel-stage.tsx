@@ -66,7 +66,7 @@ export function ReelStage({
           playsInline
           loop
           preload="none"
-          aria-label={`${title}. Sample motion from a photograph, not footage of stock.`}
+          aria-label={`${title}. Motion across the sample photograph. Not filmed product footage.`}
           className={playing ? "is-playing" : undefined}
           onPlaying={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
@@ -75,7 +75,7 @@ export function ReelStage({
           <track kind="descriptions" srcLang="en" label="English description" src="/media/silent-demo.vtt" default />
         </video>
       ) : null}
-      <p className="stage-chip demo-pill">Sample</p>
+      <p className="stage-chip demo-pill">Sample photo</p>
       <div className="stage-controls">
         {showVideo ? (
           <>
@@ -92,7 +92,7 @@ export function ReelStage({
             </button>
           </>
         ) : (
-          <p className="demo-pill">Illustration</p>
+          <p className="demo-pill">Photograph</p>
         )}
       </div>
     </div>

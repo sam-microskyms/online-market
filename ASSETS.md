@@ -1,23 +1,34 @@
 # Sample media
 
-Customer-facing pictures are photographs made by other people and reused under the licenses below. They are samples for layout. They are not stock this shop holds, and a short clip is only a slow move across that same photograph.
+Photographs on the stall are other people’s pictures, reused under the licenses below. A short clip is a slow move across that same photograph. It is not filmed product footage, and none of these objects are stock this shop holds.
 
-Do not treat a file name, a maker’s stamp inside a photo, or a museum record as a product we sell.
+## Shown on the stall
 
 | Listing | File | Source | Creator | License |
 | --- | --- | --- | --- | --- |
-| Gold hoop earring | `nodi-hoops`, `meghna-pin` | [Hoop Earring, The Met](https://commons.wikimedia.org/wiki/File:Hoop_Earring_MET_68.136.16_EGDP019548.jpg) | The Metropolitan Museum of Art | CC0 1.0 |
-| Printed silk scarf | `nodi-scarf` | [Colored silk scarf from India 04](https://commons.wikimedia.org/wiki/File:Colored_silk_scarf_from_India_04.jpg) | Kritzolina | CC BY-SA 4.0 |
-| Shell bangle | `nodi-cuff` | [Bracelet de bénitier](https://commons.wikimedia.org/wiki/File:Bracelet_de_b%C3%A9nitier_11-o.lau-F123.LA931.jpg) | Simon Pierre Barrette (Cephas) | CC BY-SA 4.0 |
-| Copper water bottle | `basha-bottle` | [Copper water bottle](https://commons.wikimedia.org/wiki/File:Copper_water_bottle.jpg) | Dr. Satish Upalkar | CC BY-SA 4.0 |
-| Embroidered cushion cover | `basha-cushion` | [Cushion cover, Cleveland Museum of Art](https://commons.wikimedia.org/wiki/File:China,_18th_century_-_Cushion_Cover_-_1934.205.a_-_Cleveland_Museum_of_Art.jpg) | Cleveland Museum of Art | CC0 1.0 |
-| Clay spice pots | `basha-jars` | [Spices in Clay Pots](https://www.flickr.com/photos/easal/5886350383) | easal | CC BY 2.0 |
-| Olive soap bars, balm sample | `rong-soap`, `rong-balm` | [Aleppo soap 01](https://commons.wikimedia.org/wiki/File:Aleppo_soap_01.jpg) | Bernard Gagnon | CC BY-SA 3.0 |
-| Herb oil bottle and mist crop | `rong-oil`, `rong-mist` | [Rosemary oil bottle](https://commons.wikimedia.org/wiki/File:Rosemary_Oil_in_a_bottle_and_rosemary_herb.jpg) | formulatehealth | CC BY 2.0 |
-| Braided cables, sling crop, charger sample | `mobile-cable`, `mobile-sling`, `quickplug-charger` | [Five USB cables with braided jackets](https://commons.wikimedia.org/wiki/File:Five_USB_cables_with_braided_jackets_in_different_colours.jpg) | Pittigrilli | CC BY-SA 4.0 |
-| Phone screen | `mobile-glass` | [Smartphone display screen](https://commons.wikimedia.org/wiki/File:Smartphone_display_screen.jpg) | Skitterphoto | CC0 1.0 |
-| Portable speaker | `tarit-speaker` | [Bluetooth speaker NBY-18](https://commons.wikimedia.org/wiki/File:Bluetooth_speaker_NBY-18_P8041745.jpg) | Alexxx1979 | CC BY-SA 4.0. Cropped to keep a printed name off the frame. |
-| Desk lamp, stand sample | `tarit-lamp`, `mobile-stand` | [A desk lamp](https://commons.wikimedia.org/wiki/File:A_desk_lamp.jpg) | AirbusA330772673 | CC BY-SA 4.0 |
-| Ring light | `tarit-ring` | [Ring light setup](https://commons.wikimedia.org/wiki/File:Digitaliza%C3%A7%C3%A3o_Tridimensional_-_Ilumina%C3%A7%C3%A3o_Ring_Light.jpg) | Marcele de Oliveira Gonçalves | CC BY-SA 4.0 |
+| Mirrored sunglasses | `nodi-hoops` | [Sports sunglasses, Mezmay](https://commons.wikimedia.org/wiki/File:Mezmay,_Sports_sunglasses,_Reflective_mirrored_sunglasses,_Russia.jpg) | Vyacheslav Argenberg | CC BY 4.0 |
+| Hair clips | `nodi-scarf` | [Haarspangen](https://commons.wikimedia.org/wiki/File:Haarspangen.jpg) | Gerd Fahrenhorst | CC BY 3.0 |
+| Electric kettle | `basha-bottle` | [Electric water boiler](https://commons.wikimedia.org/wiki/File:Electric_water_boiler_2014.JPG) | Lesekreis | CC0 1.0 |
+| Stainless water bottle | `basha-jars` | [Stainless steel water bottle](https://commons.wikimedia.org/wiki/File:Stainless_Steel_Water_Bottle.jpg) | Gannu03 | CC BY-SA 4.0 |
+| Lipstick | `rong-soap` | [Lipstick](https://commons.wikimedia.org/wiki/File:Lipstick_(product).jpg) | Maria Morri | CC BY-SA 2.0 |
+| Dropper bottle | `rong-mist` | [Rosemary oil bottle](https://commons.wikimedia.org/wiki/File:Rosemary_Oil_in_a_bottle_and_rosemary_herb.jpg) | formulatehealth | CC BY 2.0 |
+| USB-C cable | `mobile-cable` | [Two USB-C connectors](https://commons.wikimedia.org/wiki/File:Two_USB-C_connectors_being_held.jpg) | Logant547 | CC BY 4.0 |
+| Desk lamp | `tarit-ring` | [A desk lamp](https://commons.wikimedia.org/wiki/File:A_desk_lamp.jpg) | AirbusA330772673 | CC BY-SA 4.0 |
 
-`scripts/fetch-sample-media.py` downloads these files and writes the jpg and mp4 used by the app. Interface type is Inter and Noto Sans Bengali from Google Fonts, both SIL Open Font License 1.1, fetched at build time. Next.js and React are MIT.
+## Not on the stall
+
+These files belong to listings that stay hidden, pending, or rejected. They are not in the reel or the shop.
+
+| File | Source | Creator | License |
+| --- | --- | --- | --- |
+| `meghna-pin` | [Hoop earring, The Met](https://commons.wikimedia.org/wiki/File:Hoop_Earring_MET_68.136.16_EGDP019548.jpg) | The Metropolitan Museum of Art | CC0 1.0 |
+| `nodi-cuff` | [Shell bracelet](https://commons.wikimedia.org/wiki/File:Bracelet_de_b%C3%A9nitier_11-o.lau-F123.LA931.jpg) | Simon Pierre Barrette (Cephas) | CC BY-SA 4.0 |
+| `basha-cushion` | [Cushion cover, Cleveland Museum of Art](https://commons.wikimedia.org/wiki/File:China,_18th_century_-_Cushion_Cover_-_1934.205.a_-_Cleveland_Museum_of_Art.jpg) | Cleveland Museum of Art | CC0 1.0 |
+| `rong-oil` | [Rosemary oil bottle](https://commons.wikimedia.org/wiki/File:Rosemary_Oil_in_a_bottle_and_rosemary_herb.jpg) | formulatehealth | CC BY 2.0 |
+| `rong-balm` | [Aleppo soap](https://commons.wikimedia.org/wiki/File:Aleppo_soap_01.jpg) | Bernard Gagnon | CC BY-SA 3.0 |
+| `mobile-sling`, `quickplug-charger` | [Braided USB cables](https://commons.wikimedia.org/wiki/File:Five_USB_cables_with_braided_jackets_in_different_colours.jpg) | Pittigrilli | CC BY-SA 4.0 |
+| `mobile-glass` | [Smartphone display](https://commons.wikimedia.org/wiki/File:Smartphone_display_screen.jpg) | Skitterphoto | CC0 1.0 |
+| `tarit-speaker` | [Bluetooth speaker](https://commons.wikimedia.org/wiki/File:Bluetooth_speaker_NBY-18_P8041745.jpg) | Alexxx1979 | CC BY-SA 4.0. Cropped so a printed name stays out of frame. |
+| `mobile-stand`, `tarit-lamp` | [A desk lamp](https://commons.wikimedia.org/wiki/File:A_desk_lamp.jpg) | AirbusA330772673 | CC BY-SA 4.0 |
+
+`scripts/fetch-catalogue.py` rebuilds the eight stall posters. Interface type is Inter and Noto Sans Bengali from Google Fonts, both SIL Open Font License 1.1. Next.js and React are MIT.
