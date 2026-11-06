@@ -49,4 +49,4 @@ export function gatesFromConfig(config: CommerceConfig): ShopGates {
   };
 }
 
-export const CLOSED_NOTICE = "Orders are not open. Illustrations are not stock for sale.";
+export const CLOSED_NOTICE = "Preview. Orders are not open.";

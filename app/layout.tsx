@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Fraunces, Noto_Sans_Bengali, Outfit } from "next/font/google";
+import { Inter, Noto_Sans_Bengali } from "next/font/google";
 import { RetailHeader, SiteFooter } from "@/components/retail-header";
 import { getViewer } from "@/lib/commerce/session";
 import "./globals.css";
 
-const display = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap" });
-const sans = Outfit({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
-const bengali = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["500", "600"], variable: "--font-bengali", display: "swap" });
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const bengali = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["500"], variable: "--font-bengali", display: "swap" });
 
 export const metadata: Metadata = {
   title: { default: "Online Market", template: "%s — Online Market" },
@@ -15,12 +14,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#F3EEE6" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#f6f6f5" };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   const viewer = await getViewer();
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable} ${bengali.variable}`}>
+    <html lang="en" className={`${sans.variable} ${bengali.variable}`}>
       <body>
         <a className="skip" href="#content">
           Skip to content

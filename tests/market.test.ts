@@ -139,17 +139,17 @@ test("seller listing lands in review and can be approved onto the stall", () => 
   assert.equal(rejected.ok, false);
 });
 
-test("search finds a scarf and can sort by price", () => {
+test("search finds sunglasses and can sort by price", () => {
   const state = seedState();
   const visible = customerFeed(state);
   const found = filterProducts(visible, state.sellers, {
-    text: "scarf",
+    text: "sunglasses",
     category: "all",
     sellerId: "all",
     inStock: false,
     sort: "featured",
   });
-  assert.deepEqual(found.map((product) => product.id), ["nodi-scarf"]);
+  assert.deepEqual(found.map((product) => product.id), ["nodi-hoops"]);
   const prices = filterProducts(visible, state.sellers, {
     text: "",
     category: "beauty",
