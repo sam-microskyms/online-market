@@ -4,7 +4,7 @@ The pictures and clips in `public/media` are original illustrations made for thi
 
 ## What they are
 
-`scripts/make-media.mjs` draws an SVG for each sample listing, rasterizes it to PNG with `@resvg/resvg-js`, and, where a clip exists, encodes a silent MP4 with ffmpeg. The motion is a slow zoom or pan of that same illustration. Every frame is labelled "DEMO ILLUSTRATION" and "Not a photograph of a product".
+`scripts/make-media.mjs` draws an SVG for each sample listing, rasterizes it to PNG with `@resvg/resvg-js`, and, where a clip exists, encodes a silent MP4 with ffmpeg. The motion is a slow zoom or pan of that same illustration. Every frame is labelled "ILLUSTRATION" and "Not a photograph of a product".
 
 `rong-soap` is poster only, so the beauty stall has a graceful fallback with no video element.
 

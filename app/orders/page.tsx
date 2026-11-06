@@ -1,7 +1,5 @@
-import { OrdersView } from "@/components/order-view";
+import { redirect } from "next/navigation";
 
-export const metadata = { title: "Orders" };
-
-export default function OrdersPage() {
-  return <OrdersView />;
+export default function OrdersRedirect() {
+  redirect("/account/orders");
 }
