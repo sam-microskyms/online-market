@@ -70,14 +70,14 @@ function render(entry) {
   </defs>
   <rect width="720" height="1280" fill="url(#bg)"/>
   <rect width="720" height="1280" fill="url(#weave)"/>
-  <text x="360" y="118" text-anchor="middle" fill="#1C1612" font-family="Noto Sans" font-size="22" font-weight="700" letter-spacing="3">ONLINE MARKET DEMO</text>
+  <text x="360" y="118" text-anchor="middle" fill="#1C1612" font-family="Noto Sans" font-size="22" font-weight="700" letter-spacing="3">ONLINE MARKET</text>
   <text x="360" y="164" text-anchor="middle" fill="#1C1612" font-family="Noto Sans" font-size="28">${escapeXml(entry.category)}</text>
   <circle cx="360" cy="470" r="214" fill="#FFF8F1"/>
   <circle cx="360" cy="470" r="214" fill="none" stroke="#1C1612" stroke-width="4"/>
   <circle cx="360" cy="470" r="230" fill="none" stroke="#1C1612" stroke-width="1.5" stroke-dasharray="2 10"/>
   <g transform="translate(360 470)">${glyph(entry.glyph, entry.accent, entry.second)}</g>
   <rect x="48" y="760" width="624" height="430" rx="36" fill="#FFF8F1"/>
-  <text x="360" y="840" text-anchor="middle" fill="${entry.accent}" font-family="Noto Sans" font-size="22" font-weight="700" letter-spacing="2">DEMO ILLUSTRATION</text>
+  <text x="360" y="840" text-anchor="middle" fill="${entry.accent}" font-family="Noto Sans" font-size="22" font-weight="700" letter-spacing="2">ILLUSTRATION</text>
   <text x="360" y="920" text-anchor="middle" fill="#1C1612" font-family="Noto Sans" font-size="52" font-weight="700">${escapeXml(entry.title)}</text>
   <text x="360" y="990" text-anchor="middle" fill="#5C5148" font-family="Noto Sans" font-size="32">${escapeXml(entry.subtitle)}</text>
   <text x="360" y="1070" text-anchor="middle" fill="#1C1612" font-family="Noto Sans" font-size="26">${escapeXml(entry.seller)}</text>

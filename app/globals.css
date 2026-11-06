@@ -634,3 +634,68 @@ fieldset.field legend { font-weight: 700; padding: 0 6px; }
   html { scroll-behavior: auto; }
   .scroller { scroll-snap-type: y proximity; }
 }
+
+.retail-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(243, 238, 230, 0.96);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 14px 8px;
+}
+.retail-top { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+.retail-search { display: flex; gap: 8px; flex: 1 1 240px; min-width: 0; }
+.retail-search input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid #cbbba6;
+  padding: 0 14px;
+  background: white;
+}
+.retail-tools, .retail-cats, .site-footer nav { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.retail-tools a, .retail-cats a, .site-footer a { font-weight: 700; text-decoration: none; }
+.retail-cats { padding-top: 8px; flex-wrap: nowrap; overflow-x: auto; }
+.retail-cats a { flex: none; }
+.closed-banner { margin: 0; padding: 8px 16px; background: var(--warn-bg); }
+.home-hero { display: grid; min-height: 0; }
+.home-scroller { height: calc(100dvh - 18.5rem); }
+.reel-panel { display: grid; align-content: start; gap: 8px; padding: 16px; }
+.related { display: grid; gap: 0; margin-top: 8px; }
+.related a {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.category-grid a {
+  display: grid;
+  gap: 6px;
+  min-height: 104px;
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+.site-footer { display: grid; gap: 10px; padding: 28px 16px 48px; border-top: 1px solid var(--line); }
+.account-grid { display: grid; gap: 22px; }
+@media (min-width: 800px) {
+  .account-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+@media (min-width: 980px) {
+  .home-hero {
+    grid-template-columns: minmax(420px, 1.2fr) minmax(300px, 0.8fr);
+    gap: 8px 22px;
+    padding: 12px 22px 8px;
+    min-height: calc(100dvh - 7.5rem);
+  }
+  .home-scroller { height: calc(100dvh - 8.75rem); border: 1px solid var(--line); border-radius: 28px; }
+  .reel-panel { padding: 18px 8px 18px 0; }
+}

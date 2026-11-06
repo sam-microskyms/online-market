@@ -1,19 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { getSessionClip } from "@/lib/session-clips";
-import type { Product } from "@/lib/types";
 
 export function ReelStage({
-  product,
+  title,
+  poster,
+  video,
   active,
   reduced,
 }: {
-  product: Product;
+  title: string;
+  poster: string;
+  video: string | null;
   active: boolean;
   reduced: boolean | null;
 }) {
-  const src = getSessionClip(product.id) ?? product.video;
+  const src = video;
   const [playing, setPlaying] = useState(false);
   const [failed, setFailed] = useState(false);
   const [manual, setManual] = useState(false);
@@ -50,21 +52,21 @@ export function ReelStage({
   }
 
   const showVideo = Boolean(active && src && !failed);
-  const illustration = `${product.title}. Demo illustration, not a photograph.`;
+  const illustration = `${title}. Illustration, not a photograph of stock.`;
 
   return (
     <div className="stage">
-      <img src={product.poster} alt={playing ? "" : illustration} />
+      <img src={poster} alt={playing ? "" : illustration} />
       {showVideo ? (
         <video
           ref={nodeRef}
           src={src ?? undefined}
-          poster={product.poster}
+          poster={poster}
           muted={muted}
           playsInline
           loop
           preload="none"
-          aria-label={`${product.title}. Silent demo illustration, not product footage.`}
+          aria-label={`${title}. Silent illustration, not product footage.`}
           className={playing ? "is-playing" : undefined}
           onPlaying={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
@@ -73,7 +75,7 @@ export function ReelStage({
           <track kind="descriptions" srcLang="en" label="English description" src="/media/silent-demo.vtt" default />
         </video>
       ) : null}
-      <p className="stage-chip demo-pill">{src ? "Demo clip" : "Poster"}</p>
+      <p className="stage-chip demo-pill">{src ? "Clip" : "Illustration"}</p>
       <div className="stage-controls">
         {showVideo ? (
           <>

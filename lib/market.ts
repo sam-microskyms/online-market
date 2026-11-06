@@ -1,3 +1,5 @@
+// Older helper module kept for listing-duration checks and illustration data.
+// Shop checkout does not use placeOrder from this file.
 import type {
   CategoryId,
   DemoOrder,
