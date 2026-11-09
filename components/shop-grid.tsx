@@ -68,7 +68,10 @@ export function ShopGrid({
             <Link key={offer.id} className="card" href={`/product/${offer.id}`}>
                 <img src={offer.poster} alt={`${offer.title}. Sample photograph, not merchandise in stock.`} />
               <h2>{offer.title}</h2>
-              <p className="price">{formatBdt(offer.priceBdt)}</p>
+              <p className="price">
+                <span className="help">Sample price </span>
+                {formatBdt(offer.priceBdt)}
+              </p>
               <p className="help">
                 {offer.sellerName}
                 {offer.purchasable ? ` · Stock ${offer.stock}` : " · Not for sale"}

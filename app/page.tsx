@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import { ClosedBanner } from "@/components/retail-header";
-import { HomeReel } from "@/components/home-reel";
+import { FullscreenReel } from "@/components/fullscreen-reel";
+import { isFilmedClip } from "@/lib/commerce/preview-map";
 import { loadStorefront } from "@/lib/commerce/storefront";
-import { CATEGORIES } from "@/lib/market";
 
 export default function HomePage({ searchParams }: { searchParams: Promise<{ item?: string }> }) {
   return (
@@ -16,25 +15,25 @@ export default function HomePage({ searchParams }: { searchParams: Promise<{ ite
 async function HomeContent({ searchParams }: { searchParams: Promise<{ item?: string }> }) {
   const params = await searchParams;
   const store = await loadStorefront();
-  return (
-    <>
-      <ClosedBanner notice={store.notice} />
-      <HomeReel offers={store.offers} startId={params.item} />
+  const clips = store.offers.filter((offer) => isFilmedClip(offer.id) && offer.video);
+  const requested = params.item;
+  if (requested && !clips.some((offer) => offer.id === requested)) {
+    const named = store.offers.find((offer) => offer.id === requested);
+    return (
       <section className="page">
-        <header className="page-intro">
-          <p className="eyebrow">Shop</p>
-          <h2>Categories</h2>
-          <p className="lede">The reel is the front of the shop. These departments are the same listings in a grid.</p>
-        </header>
-        <div className="category-grid">
-          {CATEGORIES.map((category) => (
-            <Link key={category.id} href={`/shop?category=${category.id}`}>
-              <strong>{category.label}</strong>
-              <span>Open the grid</span>
-            </Link>
-          ))}
-        </div>
+        <h1>Not in the reel</h1>
+        <p>
+          {named
+            ? `${named.title} is not one of the filmed clips, so it is not opened in the reel.`
+            : "That listing is not in the reel."}
+        </p>
+        <p>
+          <Link href="/">Open the filmed reel</Link>
+          {" · "}
+          <Link href={named ? `/product/${named.id}` : "/shop"}>{named ? "Back to the product" : "Shop"}</Link>
+        </p>
       </section>
-    </>
-  );
+    );
+  }
+  return <FullscreenReel offers={clips} startId={requested} />;
 }
