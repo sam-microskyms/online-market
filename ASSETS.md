@@ -8,8 +8,8 @@ Each file was transcoded to H.264 with AAC audio, scaled down, and given a JPEG 
 
 | Listing | File | Source page | Creator | License | What was kept |
 | --- | --- | --- | --- | --- | --- |
-| Stovetop whistling kettle | `basha-bottle` | [Whistling kettle on gas range](https://commons.wikimedia.org/wiki/File:Whistling_kettle_on_gas_range.webm) | Infrogmation of New Orleans | CC BY-SA 2.0 | Full 5.3s source, scaled to 1280×720 |
-| Heat-sensitive face mugs | `basha-jars` | [Morning Mug](https://commons.wikimedia.org/wiki/File:Morning_Mug.webm) | Manuel Stadelmann | CC BY 3.0 | 15s starting at 12s, scaled to 960×540, so the colour change stays in frame |
+| Stovetop kettle | `basha-bottle` | [Whistling kettle on gas range](https://commons.wikimedia.org/wiki/File:Whistling_kettle_on_gas_range.webm) | Infrogmation of New Orleans | CC BY-SA 2.0 | Full 5.3s source, scaled to 1280×720. The listing name matches the kettle on the stove, not the appliance in the background. |
+| Two face-print mugs | `basha-jars` | [Morning Mug](https://commons.wikimedia.org/wiki/File:Morning_Mug.webm) | Manuel Stadelmann | CC BY 3.0 | 15s starting at 12s, scaled to 960×540. A print changes in frame. No heat or coating claim is made. |
 | Mug being filled | `basha-cushion` | [Waking up mug](https://commons.wikimedia.org/wiki/File:Waking_up_mug.webm) | Fabio Battarra | CC BY 3.0 | First 15s, scaled to 960×720 |
 
 ## Photographs on the stall
@@ -18,8 +18,8 @@ Each file was transcoded to H.264 with AAC audio, scaled down, and given a JPEG 
 | --- | --- | --- | --- | --- |
 | Mirrored sunglasses | `nodi-hoops` | [Sports sunglasses, Mezmay](https://commons.wikimedia.org/wiki/File:Mezmay,_Sports_sunglasses,_Reflective_mirrored_sunglasses,_Russia.jpg) | Vyacheslav Argenberg | CC BY 4.0 |
 | Hair clips | `nodi-scarf` | [Haarspangen](https://commons.wikimedia.org/wiki/File:Haarspangen.jpg) | Gerd Fahrenhorst | CC BY 3.0 |
-| Stovetop whistling kettle | `basha-bottle` | Poster frame from the filmed clip above | Infrogmation of New Orleans | CC BY-SA 2.0 |
-| Heat-sensitive face mugs | `basha-jars` | Poster frame from the filmed clip above | Manuel Stadelmann | CC BY 3.0 |
+| Stovetop kettle | `basha-bottle` | Poster frame from the filmed clip above | Infrogmation of New Orleans | CC BY-SA 2.0 |
+| Two face-print mugs | `basha-jars` | Poster frame from the filmed clip above | Manuel Stadelmann | CC BY 3.0 |
 | Mug being filled | `basha-cushion` | Poster frame from the filmed clip above | Fabio Battarra | CC BY 3.0 |
 | Lipstick | `rong-soap` | [Lipstick](https://commons.wikimedia.org/wiki/File:Lipstick_(product).jpg) | Maria Morri | CC BY-SA 2.0 |
 | Dropper bottle | `rong-mist` | [Rosemary oil bottle](https://commons.wikimedia.org/wiki/File:Rosemary_Oil_in_a_bottle_and_rosemary_herb.jpg) | formulatehealth | CC BY 2.0 |

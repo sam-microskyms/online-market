@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { readCommerceConfig } from "@/lib/commerce/config";
 
 export const metadata = { title: "Become a Seller" };
 
 export default function SellPage() {
+  const applicationsOpen = readCommerceConfig(process.env).databaseConfigured;
   return (
     <div className="page">
       <header className="page-intro">
@@ -10,6 +12,11 @@ export default function SellPage() {
         <h1>Sell on Online Market</h1>
         <p className="lede">
           Approved sellers get a separate desk for listings, clips, stock, and the orders that include their items. Buyers discover products in the reel and in the shop grid.
+        </p>
+        <p>
+          {applicationsOpen
+            ? "Applications can be stored after you sign in. A new application stays pending until an admin approves it."
+            : "Seller applications are not open in this deployment. The application page explains that and does not record a submission."}
         </p>
       </header>
       <div className="stat-row">
@@ -19,7 +26,9 @@ export default function SellPage() {
         </article>
         <article className="stat">
           <strong>2</strong>
-          Submit an application with your business name, area, and categories.
+          {applicationsOpen
+            ? "Submit an application with your business name, area, and categories."
+            : "The application form is visible, but it will not accept a submission until the database is configured."}
         </article>
         <article className="stat">
           <strong>3</strong>

@@ -22,7 +22,10 @@ export function ProductScreen({ offer, related }: { offer: StoreOffer; related: 
         <div className="stack">
           <p className="eyebrow">{category?.label}</p>
           <h1>{offer.title}</h1>
-          <p className="price">{formatBdt(offer.priceBdt)}</p>
+          <p className="price">
+            <span className="help">Sample price </span>
+            {formatBdt(offer.priceBdt)}
+          </p>
           <p>
             {offer.sellerName}
             {offer.sellerArea ? ` · ${offer.sellerArea}` : ""}
@@ -66,9 +69,13 @@ export function ProductScreen({ offer, related }: { offer: StoreOffer; related: 
                 </button>
               </form>
             ) : null}
-            <Link className="btn" href={`/?item=${offer.id}`}>
-              Open in the reel
-            </Link>
+            {isFilmedClip(offer.id) && offer.video ? (
+              <Link className="btn" href={`/?item=${offer.id}`}>
+                Open in the reel
+              </Link>
+            ) : (
+              <p className="help">This listing is not in the reel. The reel only plays the filmed sample clips.</p>
+            )}
             <Link className="btn secondary" href={`/shop?category=${offer.category}`}>
               More in {category?.short}
             </Link>
